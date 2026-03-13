@@ -28,11 +28,13 @@ public class DiceGameController {
             return ResponseEntity.badRequest().build();
         }
         if(playerGuess==rolledNumber){
-           msg="Correct! The dice rolled "+ rolledNumber+"!";
+         // msg="Correct! The dice rolled "+ rolledNumber+"!";
+            msg="i love you choity....!";
            correct=true;
 
         }else {
             msg= "Wrong! You guessed " + playerGuess+ " but the dice rolled " + rolledNumber ;
+
             correct=false;
         }
         return ResponseEntity.ok(new GameResponse(correct,rolledNumber,playerGuess,msg));
